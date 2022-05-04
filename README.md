@@ -6,8 +6,8 @@
 
 #!/bin/bash
 
-mkdir /opt/mss_scripts
-cd /opt/mss_scripts/
+mkdir /opt/scripts
+cd /opt/scripts/
 > automatic_splunk_up.sh
 
 echo "#This script verifies the Splunk status every 10 minutes; it will bring Splunk Up if Splunk is down.
@@ -83,5 +83,5 @@ fi" >> automatic_syslog_up.sh
 
 
 
-echo "*/5 * * * * root /opt/mss_scripts/automatic_splunk_up.sh" >> /etc/crontab
-echo "*/5 * * * * root /opt/mss_scripts/automatic_syslog_up.sh" >> /etc/crontab
+echo "*/5 * * * * root /opt/scripts/automatic_splunk_up.sh" >> /etc/crontab
+echo "*/5 * * * * root /opt/scripts/automatic_syslog_up.sh" >> /etc/crontab
